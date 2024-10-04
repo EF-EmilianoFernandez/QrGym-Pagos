@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copiar Alias</title>
+    <title>Copiar Alias y Redirigir a Mercado Pago</title>
 </head>
 <body>
     <script>
         const alias = "prof.fede"; // Cambia esto por tu alias
 
+        // Copiar alias al portapapeles
         navigator.clipboard.writeText(alias).then(() => {
             alert("Alias copiado al portapapeles: " + alias);
         }).catch(err => {
             console.error('Error al copiar: ', err);
         });
+    </script>
+
+    <h1>¡Bienvenido!</h1>
+    <p>Tu alias ha sido copiado al portapapeles.</p>
+    
+    <!-- Botón para redirigir a la app de Mercado Pago -->
+    <button onclick="openMercadoPago()">Abrir Mercado Pago</button>
+
+    <script>
+        function openMercadoPago() {
+            // Enlace a la app de Mercado Pago
+            const mercadoPagoUrl = "https://www.mercadopago.com.ar"; // Cambia esto según la URL deseada
+            window.open(mercadoPagoUrl, '_blank'); // Abre en una nueva pestaña
+        }
     </script>
 </body>
 </html>
