@@ -10,9 +10,7 @@
         const alias = "prof.fede"; // Cambia esto por tu alias
 
         // Copiar alias al portapapeles
-        navigator.clipboard.writeText(alias).then(() => {
-            alert("Alias copiado al portapapeles: " + alias);
-        }).catch(err => {
+        navigator.clipboard.writeText(alias).catch(err => {
             console.error('Error al copiar: ', err);
         });
     </script>
@@ -31,6 +29,8 @@
         }
     </script>
 </body>
+</html>
+
 </html>
 
 
