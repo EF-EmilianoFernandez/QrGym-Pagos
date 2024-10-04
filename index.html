@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar Alias</title>
+</head>
+<body>
+    <script>
+        const alias = "prof.fede"; // Cambia esto por tu alias
+
+        navigator.clipboard.writeText(alias).then(() => {
+            alert("Alias copiado al portapapeles: " + alias);
+        }).catch(err => {
+            console.error('Error al copiar: ', err);
+        });
+    </script>
+</body>
+</html>
