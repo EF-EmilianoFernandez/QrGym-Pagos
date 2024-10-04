@@ -4,34 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar Alias y Abrir Mercado Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 90%;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 3.5rem;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 35px auto;
+            transition: background-color 0.3s ease, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para móviles */
+        @media (max-width: 576px) {
+            .btn {
+                width: 100%;
+                font-size: 2.5rem;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <script>
-        const alias = "prof.fede"; // Cambia esto por tu alias
+    <div class="container">
+        <script>
+            const alias = "prof.fede"; // Cambia esto por tu alias
 
-        // Copiar alias al portapapeles
-        navigator.clipboard.writeText(alias).catch(err => {
-            console.error('Error al copiar: ', err);
-        });
-    </script>
+            // Copiar alias al portapapeles
+            navigator.clipboard.writeText(alias).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        </script>
 
-    <h1>¡Bienvenido!</h1>
-    <p>Tu alias ha sido copiado al portapapeles.</p>
-    
-    <!-- Botón para abrir la URL de Mercado Pago -->
-    <button onclick="openMercadoPago()">Abrir Mercado Pago</button>
+        <h1>¡Bienvenido!</h1>
+        <p>Tu alias ha sido copiado al portapapeles.</p>
+        
+        <!-- Botón para abrir la URL de Mercado Pago -->
+        <button class="btn" onclick="openMercadoPago()">Abrir Mercado Pago</button>
 
-    <script>
-        function openMercadoPago() {
-            // URL que deseas abrir
-            const mercadoPagoUrl = "https://852u.adj.st/home/?adj_t=mqo65e0&adj_label=nav_mp_login&adj_campaign=nav_mp_login&adj_fallback=https%3A%2F%2Fwww.mercadolibre.com%2Fjms%2Fmla%2Flgz%2Flogin%3Fplatform_id%3DMP%26go%3Dhttps%253A%252F%252Fwww.mercadopago.com.ar%252F%26loginType%3Dexplicit&adj_redirect_macos=https%3A%2F%2Fwww.mercadolibre.com%2Fjms%2Fmla%2Flgz%2Flogin%3Fplatform_id%3DMP%26go%3Dhttps%253A%252F%252Fwww.mercadopago.com.ar%252F%26loginType%3Dexplicit";
-            window.location.href = mercadoPagoUrl; // Redirige al enlace
-        }
-    </script>
+        <script>
+            function openMercadoPago() {
+                // URL que deseas abrir
+                const mercadoPagoUrl = "https://852u.adj.st/home/?adj_t=mqo65e0&adj_label=nav_mp_login&adj_campaign=nav_mp_login&adj_fallback=https%3A%2F%2Fwww.mercadolibre.com%2Fjms%2Fmla%2Flgz%2Flogin%3Fplatform_id%3DMP%26go%3Dhttps%253A%252F%252Fwww.mercadopago.com.ar%252F%26loginType%3Dexplicit&adj_redirect_macos=https%3A%2F%2Fwww.mercadolibre.com%2Fjms%2Fmla%2Flgz%2Flogin%3Fplatform_id%3DMP%26go%3Dhttps%253A%252F%252Fwww.mercadopago.com.ar%252F%26loginType%3Dexplicit";
+                window.location.href = mercadoPagoUrl; // Redirige al enlace
+            }
+        </script>
+    </div>
 </body>
 </html>
-
-</html>
-
 
 
