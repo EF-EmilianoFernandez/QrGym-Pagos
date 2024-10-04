@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copiar Alias y Redirigir a Mercado Pago</title>
+    <title>Copiar Alias y Abrir Mercado Pago</title>
 </head>
 <body>
     <script>
@@ -20,15 +20,16 @@
     <h1>¡Bienvenido!</h1>
     <p>Tu alias ha sido copiado al portapapeles.</p>
     
-    <!-- Botón para redirigir a la app de Mercado Pago -->
+    <!-- Botón para abrir la app de Mercado Pago -->
     <button onclick="openMercadoPago()">Abrir Mercado Pago</button>
 
     <script>
         function openMercadoPago() {
-            // Enlace a la app de Mercado Pago
-            const mercadoPagoUrl = "https://www.mercadopago.com.ar"; // Cambia esto según la URL deseada
-            window.open(mercadoPagoUrl, '_blank'); // Abre en una nueva pestaña
+            // Enlace para abrir la app de Mercado Pago
+            const mercadoPagoUrl = "mercadopago://"; // Esquema para abrir la app
+            window.location.href = mercadoPagoUrl; // Intenta abrir la app
         }
     </script>
 </body>
 </html>
+
