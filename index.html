@@ -1,63 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagar con Mercado Pago</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      text-align: center;
-      background-color: white;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .container h1 {
-      color: #333;
-    }
-    .payment-button {
-      background-color: #339af0;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .payment-button:hover {
-      background-color: #1c7ed6;
-    }
-    .payment-button:active {
-      background-color: #1864ab;
-    }
-    .logo {
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar por Transferencia</title>
+    <style>
+        .btn-pagar {
+            background-color: #009ee3;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .instrucciones {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercado_Pago_logo.svg" alt="Mercado Pago" width="200">
-    <h1>Realizar Pago</h1>
-    <p>Haga clic en el botón de abajo para proceder con su pago mediante Mercado Pago.</p>
-    
-    <!-- Botón para abrir la pantalla de pagos de Mercado Pago -->
-    <a class="payment-button" href="https://www.mercadopago.com.ar/checkout/v1/redirect?preference-id=your_preference_id" target="_blank">
-      Pagar con Mercado Pago
-    </a>
-  </div>
+<a href="mercadopago://home" class="btn-pagar">Abrir Mercado Pago</a>
+
+<div class="instrucciones">
+    <p>1. Abre la app de Mercado Pago</p>
+    <p>2. Realiza una transferencia al alias: <strong>Fit-time</strong> o CVU: <strong>0000003100061838647304</strong></p>
+  
+</div>
 
 </body>
 </html>
+
