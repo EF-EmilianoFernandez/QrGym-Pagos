@@ -3,35 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagar por Transferencia</title>
+    <title>Pagar con Mercado Pago</title>
     <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 90%;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
         .btn-pagar {
-            background-color: #009ee3;
+            background-color: #007bff;
             color: white;
             padding: 15px 25px;
-            font-size: 16px;
+            font-size: 2.5rem;
             border: none;
-            border-radius: 5px;
-            text-align: center;
+            border-radius: 30px;
             cursor: pointer;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
+
+        .btn-pagar:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
         .instrucciones {
             margin-top: 20px;
-            font-size: 18px;
+            font-size: 2.5rem;
             color: #333;
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            width: 100px; /* Cambia el tamaño según sea necesario */
+            border-radius: 12px; /* Esquinas redondeadas */
+            
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .btn-pagar {
+                width: 100%;
+                font-size: 2.5rem;
+                padding: 15px;
+            }
+
+            .form-label {
+                font-size: 2.5rem;
+            }
+
+            .instrucciones {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<a href="mercadopago://home" class="btn-pagar">Abrir Mercado Pago</a>
+    <div class="container">
 
-<div class="instrucciones">
-    <p>1. Abre la app de Mercado Pago</p>
-    <p>2. Realiza una transferencia al alias: <strong>Fit-time</strong> o CVU: <strong>0000003100061838647304</strong></p>
-  
-</div>
+      <div class="instrucciones">
+        <img class="logo" src="logo.png" alt="Fit time">
+        <p>Alias: <br><strong>Fit-time</strong></p>
+        <p>CVU: <br><strong>0000003100061838647304</strong></p>
+        
+    </div>
+        <a href="mercadopago://home" class="btn-pagar">Abrir Mercado Pago</a>
+    </div>
 
 </body>
 </html>
