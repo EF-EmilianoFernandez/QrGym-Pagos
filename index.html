@@ -62,11 +62,29 @@
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s ease, transform 0.2s;
+            margin: 10px 0; /* Espaciado entre botones */
         }
 
         .btn-pagar:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
+        }
+
+        /* Botones personalizados para otras billeteras */
+        .btn-naranja {
+            background-color: #FF6F00; /* Color Naranja X */
+        }
+
+        .btn-personal {
+            background-color: #C90D0D; /* Color Personal Pay */
+        }
+
+        .btn-uala {
+            background-color: #F4C300; /* Color Ualá */
+        }
+
+        .btn-brubank {
+            background-color: #2F2D57; /* Color Brubank */
         }
 
         .instrucciones {
@@ -79,7 +97,6 @@
         .logo {
             width: 100px; /* Cambia el tamaño según sea necesario */
             border-radius: 12px; /* Esquinas redondeadas */
-            
         }
 
         /* Estilos responsivos */
@@ -115,11 +132,18 @@
     <div class="container">
 
       <div class="instrucciones">
+        <img class="logo" src="logo.png" alt="">
         <p>Alias: <br><strong>Fit-time</strong></p>
         <p>CVU: <br><strong>0000003100061838647304</strong></p>
-        
     </div>
-        <a href="mercadopago://home" class="btn-pagar">Abrir Mercado Pago</a>
+    
+    <!-- Botones para abrir las apps de las billeteras virtuales -->
+    <a href="mercadopago://home" class="btn-pagar"> Pagar con Mercado Pago</a>
+    <a href="naranja://home" class="btn-pagar btn-naranja">Pagar con Naranja X</a>
+    <a href="personalpay://home" class="btn-pagar btn-personal">Pagar con Personal Pay</a>
+    <a href="uala://home" class="btn-pagar btn-uala">Pagar con Ualá</a>
+    <a href="brubank://home" class="btn-pagar btn-brubank">Pagar con Brubank</a>
+
     </div>
 
 </body>
