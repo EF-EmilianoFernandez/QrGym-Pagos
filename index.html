@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi QR de Pago</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        button {
-            margin: 10px;
-            padding: 15px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagar con Mercado Pago</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .container h1 {
+      color: #333;
+    }
+    .payment-button {
+      background-color: #339af0;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .payment-button:hover {
+      background-color: #1c7ed6;
+    }
+    .payment-button:active {
+      background-color: #1864ab;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Mi Alias: tu_alias</h1>
-    <h2>Mi CBU: tu_cbu</h2>
-
-    <h3>Selecciona tu método de pago:</h3>
+  <div class="container">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercado_Pago_logo.svg" alt="Mercado Pago" width="200">
+    <h1>Realizar Pago</h1>
+    <p>Haga clic en el botón de abajo para proceder con su pago mediante Mercado Pago.</p>
     
-    <button onclick="openApp('mercado_pago')">Mercado Pago</button>
-    <button onclick="openApp('naranja_x')">Naranja X</button>
-    <button onclick="openApp('brubank')">Brubank</button>
-    <button onclick="openApp('personal_pay')">Personal Pay</button>
-    <button onclick="openApp('uala')">Ualá</button>
-
-    <script>
-        function openApp(app) {
-            let url;
-            switch(app) {
-                case 'mercado_pago':
-                    url = 'mp://'; // Esquema de URL de Mercado Pago
-                    break;
-                case 'naranja_x':
-                    url = 'naranja://'; // Esquema de URL de Naranja X
-                    break;
-                case 'brubank':
-                    url = 'brubank://'; // Esquema de URL de Brubank
-                    break;
-                case 'personal_pay':
-                    url = 'personalpay://'; // Esquema de URL de Personal Pay
-                    break;
-                case 'uala':
-                    url = 'uala://'; // Esquema de URL de Ualá
-                    break;
-                default:
-                    alert('App no soportada');
-                    return;
-            }
-
-            // Intenta abrir la app y maneja el caso si no está instalada
-            window.location.href = url;
-            setTimeout(function () {
-                window.location.href = 'https://www.example.com'; // URL alternativa si no se abre la app
-            }, 2000); // 2 segundos para dar tiempo a abrir la app
-        }
-    </script>
+    <!-- Botón para abrir la pantalla de pagos de Mercado Pago -->
+    <a class="payment-button" href="https://www.mercadopago.com.ar/checkout/v1/redirect?preference-id=your_preference_id" target="_blank">
+      Pagar con Mercado Pago
+    </a>
+  </div>
 
 </body>
 </html>
-
