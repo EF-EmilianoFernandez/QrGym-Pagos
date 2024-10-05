@@ -20,8 +20,8 @@
 </head>
 <body>
 
-    <h1>Mi Alias: Fit-time</h1>
-    <h2>Mi CBU: 0000003100061838647304</h2>
+    <h1>Mi Alias: tu_alias</h1>
+    <h2>Mi CBU: tu_cbu</h2>
 
     <h3>Selecciona tu método de pago:</h3>
     
@@ -33,27 +33,36 @@
 
     <script>
         function openApp(app) {
+            let url;
             switch(app) {
                 case 'mercado_pago':
-                    window.location.href = 'mp://'; // Enlace para abrir Mercado Pago
+                    url = 'mp://'; // Esquema de URL de Mercado Pago
                     break;
                 case 'naranja_x':
-                    window.location.href = 'naranja://'; // Enlace para abrir Naranja X
+                    url = 'naranja://'; // Esquema de URL de Naranja X
                     break;
                 case 'brubank':
-                    window.location.href = 'brubank://'; // Enlace para abrir Brubank
+                    url = 'brubank://'; // Esquema de URL de Brubank
                     break;
                 case 'personal_pay':
-                    window.location.href = 'personalpay://'; // Enlace para abrir Personal Pay
+                    url = 'personalpay://'; // Esquema de URL de Personal Pay
                     break;
                 case 'uala':
-                    window.location.href = 'uala://'; // Enlace para abrir Ualá
+                    url = 'uala://'; // Esquema de URL de Ualá
                     break;
                 default:
                     alert('App no soportada');
+                    return;
             }
+
+            // Intenta abrir la app y maneja el caso si no está instalada
+            window.location.href = url;
+            setTimeout(function () {
+                window.location.href = 'https://www.example.com'; // URL alternativa si no se abre la app
+            }, 2000); // 2 segundos para dar tiempo a abrir la app
         }
     </script>
 
 </body>
 </html>
+
